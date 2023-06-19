@@ -45,7 +45,7 @@ user_id_2 = os.environ["USER_ID_2"]  # 如果只有一个人，删去即可
 ]
 '''
 user_id_list = [
-    {'user_id': USER_ID_1, "name": "Dear", "date": "2023-4-24", "birthday": "10-3",
+    {'user_id': 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, "name": "Dear", "date": "2023-4-24", "birthday": "10-3",
      'city': '320583'}
     # ,{'user_id': user_id_2, "name": 'Orange', "date": "2021-04-02", "birthday": "05-28",
     #  'city': '110108'}
