@@ -115,7 +115,7 @@ def wx_push():
         # 获取今天日期
         # Date=today.strftime("%Y-%m-%d")
         data = {
-            # "Time": {"value": today.strftime("%Y-%m-%d"), "color": get_random_color()},
+            "Time": {"value": today.strftime("%Y-%m-%d"), "color": get_random_color()},
             "name": {"value": name, "color": get_random_color()},
             "weather": {"value": wea, "color": get_random_color()},
             "temperature": {"value": temperature + "℃", "color": get_random_color()},
