@@ -34,15 +34,19 @@ user_id_2 = os.environ["USER_ID_2"]  # 如果只有一个人，删去即可
 # 用户列表 如果有新增人员，对应添加一个user对象即可
 
 '''
-    user_id: 微信公众号的 openid
-       name: 昵称
-       date: 相识日期
-   birthday: 生日
-       city: 城市编码，在高德 api 接口文档处查询
+    user_id_list = [
+    {
+        'user_id': user_id_1,  # 用户 ID，不需要在这里修改
+        "name": 'Orange',   # 用户昵称，可以修改，随便写
+        "date": "2021-04-02",  # 纪念日，可以修改
+        "birthday": "05-28",    # 生日，可以修改
+        "city": "110108"    # 城市代码，可以修改，在高德 API 中查询
+    }
+]
 '''
 user_id_list = [
-    {'user_id': user_id_1, "name": 'Orange', "date": "2021-04-02", "birthday": "05-28",
-     'city': '110108'}
+    {'user_id': USER_ID_1, "name": "Dear", "date": "2023-4-24", "birthday": "10-3",
+     'city': '320583'}
     # ,{'user_id': user_id_2, "name": 'Orange', "date": "2021-04-02", "birthday": "05-28",
     #  'city': '110108'}
 ]
