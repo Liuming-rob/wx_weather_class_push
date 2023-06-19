@@ -116,6 +116,7 @@ def wx_push():
         # Date=today.strftime("%Y-%m-%d")
         data = {
             "Time": {"value": today.strftime("%Y-%m-%d"), "color": get_random_color()},
+            "words": {"value": get_words(), "color": get_random_color()},
             "name": {"value": name, "color": get_random_color()},
             "weather": {"value": wea, "color": get_random_color()},
             "temperature": {"value": temperature + "℃", "color": get_random_color()},
@@ -123,7 +124,7 @@ def wx_push():
             "winddirection": {"value": winddirection, "color": get_random_color()},
             "love_days": {"value": get_count(start_date), "color": get_random_color()},
             "birthday_left": {"value": get_birthday(birthday), "color": get_random_color()},
-            "words": {"value": get_words(), "color": get_random_color()}
+            # "words": {"value": get_words(), "color": get_random_color()}
         }
         res = wm.send_template(user_id, template_id, data)
         print(res)
