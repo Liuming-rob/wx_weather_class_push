@@ -27,12 +27,12 @@ import requests
 def run():
     headers = {
         'Accept': 'application/vnd.github+json',
-        'Authorization': 'token 你的TOKEN',
+        'Authorization': 'token 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',
     }
 
     data = '{"event_type": "morning"}'
 
-    response = requests.post(f'https://api.github.com/repos/你的用户名/wx_weather_class_push/dispatches',
+    response = requests.post(f'https://api.github.com/repos/Liuming-rob/wx_weather_class_push/dispatches',
                              headers=headers, data=data)
 
 
