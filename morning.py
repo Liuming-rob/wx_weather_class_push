@@ -119,7 +119,7 @@ def wx_push():
             "words": {"value": get_words(), "color": get_random_color()},
             "name": {"value": name, "color": get_random_color()},
             "weather": {"value": wea, "color": get_random_color()},
-            "temperature": {"value": temperature + "℃", "color": get_random_color()},
+            "temperature": {"value": temperature+"℃", "color": get_random_color()},
             "cityname": {"value": cityName, "color": get_random_color()},
             "winddirection": {"value": winddirection, "color": get_random_color()},
             "love_days": {"value": get_count(start_date), "color": get_random_color()},
