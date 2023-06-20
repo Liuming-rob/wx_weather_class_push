@@ -110,6 +110,7 @@ def wx_push():
         wea, temperature, winddirection, cityName = get_weather(city)
 
         client = WeChatClient(app_id, app_secret)
+        word = get_words()
 
         wm = WeChatMessage(client)
         # 获取今天日期
@@ -123,7 +124,7 @@ def wx_push():
             "winddirection": {"value": winddirection, "color": get_random_color()},
             "love_days": {"value": get_count(start_date), "color": get_random_color()},
             "birthday_left": {"value": get_birthday(birthday), "color": get_random_color()},
-            "words": {"value": get_words(), "color": get_random_color()},
+            "words": {"value": word, "color": get_random_color()},
             }
         res = wm.send_template(user_id, template_id, data)
         print(res)
