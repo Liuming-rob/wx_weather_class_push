@@ -22,7 +22,7 @@ key = os.environ["KEY"]
 template_id = os.environ["TEMPLATE_ID"]
 
 # 用户ID
-# user_id_1 = os.environ["USER_ID_1"]
+user_id_1 = os.environ["USER_ID_1"]
 # user_id_2 = os.environ["USER_ID_2"]  # 如果只有一个人，删去即可
 
 # 以上环境变量不需要修改，只需要在 github 的 secrets 中添加即可
@@ -45,7 +45,7 @@ template_id = os.environ["TEMPLATE_ID"]
 ]
 '''
 user_id_list = [
-    {'user_id': 'oUxe66BJYHn1m62tQykUauMapHAE', "name": "Dear", "date": "2023-4-24", "birthday": "10-3",
+    {'user_id': 'user_id_1', "name": "Dear", "date": "2023-4-16", "birthday": "10-3",
      'city': '320583'}
     # ,{'user_id': user_id_2, "name": 'Orange', "date": "2021-04-02", "birthday": "05-28",
     #  'city': '110108'}
@@ -113,10 +113,9 @@ def wx_push():
 
         wm = WeChatMessage(client)
         # 获取今天日期
-        # Date=today.strftime("%Y-%m-%d")
+        Date=today.strftime("%Y-%m-%d")
         data = {
             "Time": {"value": today.strftime("%Y-%m-%d"), "color": get_random_color()},
-            "words": {"value": get_words(), "color": get_random_color()},
             "name": {"value": name, "color": get_random_color()},
             "weather": {"value": wea, "color": get_random_color()},
             "temperature": {"value": temperature, "color": get_random_color()},
@@ -124,7 +123,7 @@ def wx_push():
             "winddirection": {"value": winddirection, "color": get_random_color()},
             "love_days": {"value": get_count(start_date), "color": get_random_color()},
             "birthday_left": {"value": get_birthday(birthday), "color": get_random_color()},
-            # "words": {"value": get_words(), "color": get_random_color()}
+            "words": {"value": get_words(), "color": get_random_color()},
         }
         res = wm.send_template(user_id, template_id, data)
         print(res)
